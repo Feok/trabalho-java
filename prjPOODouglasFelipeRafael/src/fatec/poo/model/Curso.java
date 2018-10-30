@@ -14,12 +14,12 @@ public class Curso {
     private String dataVigencia;
     private double valorHoraInstrutor;
     private String programa;
-    private ArrayList<Pessoa> pessoas;
+    private ArrayList<Turma> turmas;
 
     public Curso(String sigla, String nome) {
         this.sigla = sigla;
         this.nome = nome;
-        this.pessoas = new ArrayList<Pessoa>();
+        this.turmas = new ArrayList<Turma>();
     }
 
     public void setCargaHoraria(int CargaHoraria) {
@@ -42,6 +42,10 @@ public class Curso {
         this.programa = Programa;
     }
 
+    public void addTurma(Turma turma){
+        turmas.add(turma);
+        turma.setCurso(this);
+    }
 
 
 }

@@ -4,11 +4,12 @@ package fatec.poo.model;
  *
  * @author Dougla
  */
-public class Matricula {
+public abstract class Matricula {
     private final String data;
     private int qtdeFaltas;
     private double nota;
-    private String matricula;
+    private Aluno aluno;
+    private Turma turma;
 
     public Matricula(String data) {
         this.data = data;
@@ -22,7 +23,15 @@ public class Matricula {
         this.nota = nota;
     }
     
-   public void emitirCarne() {
-       
-   }
+    public abstract void emitirCarne();
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
+   
+   
 }

@@ -14,11 +14,13 @@ public abstract class Turma {
     private String periodo;
     private int qtdVagas;
     private String observacoes;
-    private ArrayList<Pessoa> pessoas;
+    private Instrutor instrutor;
+    private Curso curso;
+    private ArrayList<Matricula> matriculas;
 
     public Turma(String SiglaTurma) {
         this.siglaTurma = SiglaTurma;
-        this.pessoas = new ArrayList<Pessoa>(); 
+        this.matriculas = new ArrayList<Matricula>(); 
     }
 
     public void setDescricao(String Descricao) {
@@ -47,4 +49,16 @@ public abstract class Turma {
 
     public abstract void emitirListaFrequencia();
 
+    void setInstrutor(Instrutor instrutor) {
+        this.instrutor = instrutor;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+    
+    public void addMatricula(Matricula matricula){
+        matriculas.add(matricula);
+        matricula.setTurma(this);
+    }  
 }

@@ -9,11 +9,11 @@ import java.util.ArrayList;
 public class Instrutor extends Pessoa{
     private String formacao;
     private String areaAtuacao;
-    private ArrayList<Curso> cursos;
+    private ArrayList<Turma> turmas;
 
     public Instrutor(String nome, String cpf) {
         super(cpf, nome);
-        this.cursos = new ArrayList<Curso>();
+        this.turmas = new ArrayList<Turma>();
     }
 
     public void setFormacao(String Formacao) {
@@ -23,8 +23,9 @@ public class Instrutor extends Pessoa{
     public void setAreaAtuacao(String AreaAtuacao) {
         this.areaAtuacao = AreaAtuacao;
     }
-
-
-
-  
+    
+    public void addTurma(Turma turma){
+        turmas.add(turma);
+        turma.setInstrutor(this);
+    }
 }

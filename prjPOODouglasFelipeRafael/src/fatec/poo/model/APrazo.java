@@ -17,13 +17,12 @@ public class APrazo {
     public void setDtVencimento(String DtVencimento) {
         this.dtVencimento = DtVencimento;
     }
-
    
     public void setTaxaJuros(double TaxaJuros) {
         this.taxaJuros = TaxaJuros;
     }
     
- public void setQtdeMensalidade(int QtdeMensalidade) {
+    public void setQtdeMensalidade(int QtdeMensalidade) {
         this.qtdeMensalidade = QtdeMensalidade;
     }    
 
