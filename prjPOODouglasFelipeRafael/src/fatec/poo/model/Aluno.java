@@ -8,8 +8,8 @@ public class Aluno extends Pessoa{
     private String escolaridade;
     private Matricula matricula;
 
-    public Aluno(String nome, String cpf) {
-        super(nome, cpf);
+    public Aluno(String cpf, String nome) {
+        super(cpf, nome);
     }
 
     public void setEscolaridade(String Escolaridade) {

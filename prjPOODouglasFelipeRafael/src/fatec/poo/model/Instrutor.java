@@ -11,7 +11,7 @@ public class Instrutor extends Pessoa{
     private String areaAtuacao;
     private ArrayList<Turma> turmas;
 
-    public Instrutor(String nome, String cpf) {
+    public Instrutor(String cpf, String nome) {
         super(cpf, nome);
         this.turmas = new ArrayList<Turma>();
     }
